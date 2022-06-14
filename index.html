@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rateio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <body>
+        <section>
+            <div class="titulo">
+                <h1>Rateio Contábil</h1>
+            </div>
+            <div id="dados">
+                <h2>Valor Total<a></a>
+                    <br><input type="number"  name="tot" id="total">
+                </h2>
+
+                <h2>
+                    <input type="button" value="Calcular" onclick="calcular()">
+                </h2>
+            </div>
+                <div id="subt">
+            
+                </div>
+            <div class="bloco">   
+                <div id="sjdr">
+                </div>
+                <div id="lavr">
+                </div>
+                <div id="alfv">
+                </div>
+            </div>
+            
+
+        </section>  
+
+        <script>
+            function calcular(){
+            let p = window.document.getElementById(`total`)
+            
+             if(total.value.length == 0){
+                window.alert('Por favor, insira o valor da nota')
+            }  
+            else{
+                let total = Number(p.value)
+                let subtotal = Number(total / 6)
+                let cinq0 = Number(subtotal * 0.50)
+                let trin5 = Number(subtotal * 0.35)
+                let vint5 = Number(subtotal * 0.25)
+                let vint0 = Number(subtotal * 0.20)
+                let quinz = Number(subtotal * 0.15)
+                let dez   = Number(subtotal * 0.10)
+                let adsj  = Number((subtotal * 0.20) + (subtotal * 2) )
+
+                subt.innerHTML = `<h4> Valor de rastreio base: ${parseFloat(subtotal.toFixed(2))} </h4>`
+
+                
+                                    
+                lavr.innerHTML = `<h3> Lavras</h3
+                                  <h4>
+                                    VN: ${parseFloat(cinq0.toFixed(2))} <br>
+                                    PE: ${parseFloat(vint5.toFixed(2))} <br>
+                                    AT: ${parseFloat(vint5.toFixed(2))} <br></h4>`
+
+                alfv.innerHTML = `<h3> Alf/Varg</h3
+                                  <h4>
+                                    VN: ${parseFloat(trin5.toFixed(2))} <br>
+                                    SN: ${parseFloat(vint5.toFixed(2))} <br>
+                                    PE: ${parseFloat(vint0.toFixed(2))} <br>
+                                    AT: ${parseFloat(vint0.toFixed(2))} <br></h4>`
+                
+                                    sjdr.innerHTML = `<h3> SJDR</h3
+                                  <h4>  
+                                    VN: ${parseFloat(vint5.toFixed(2))}  <br>
+                                    SN: ${parseFloat(quinz.toFixed(2))} <br>
+                                    PE: ${parseFloat(quinz.toFixed(2))} <br>
+                                    AT: ${parseFloat(quinz.toFixed(2))} <br>
+                                    LT: ${parseFloat(dez.toFixed(2))}   <br> 
+                                    AD: ${parseFloat(adsj.toFixed(2))}  <br></h4>`  
+                                     
+
+                                     
+                }        
+            }
+        </script>
+    </body>
+</html>
