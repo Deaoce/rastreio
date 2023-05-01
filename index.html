@@ -27,8 +27,7 @@
             <div class="bloco">   
                 <div id="sjdr">
                 </div>
-                <div id="lavr">
-                </div>
+                
                 <div id="alfv">
                 </div>
             </div>
@@ -45,7 +44,7 @@
             }  
             else{
                 let total = Number(p.value)
-                let subtotal = Number(total / 6)
+                let subtotal = Number(total / 7)
                 let cinq0 = Number(subtotal * 0.50)
                 let trin5 = Number(subtotal * 0.35)
                 let vint5 = Number(subtotal * 0.25)
@@ -54,35 +53,31 @@
                 let dez   = Number(subtotal * 0.10)
                 let adsj  = Number((subtotal * 0.20) + (subtotal * 2) )
 
-                subt.innerHTML = `<h4> Valor de rastreio base: ${parseFloat(subtotal.toFixed(2))} </h4>`
+                subt.innerHTML = `<h4> Valor base de rateio: ${subtotal.toLocaleString('pt-BR', { minimumFractionDigits: 2, style: 'currency', currency: 'BRL' })} <br> </h4>`
 
                 
                                     
-                lavr.innerHTML = `<h3> Lavras</h3
-                                  <h4>
-                                    VN: ${parseFloat(cinq0.toFixed(2))} <br>
-                                    PE: ${parseFloat(vint5.toFixed(2))} <br>
-                                    AT: ${parseFloat(vint5.toFixed(2))} <br></h4>`
-
-                alfv.innerHTML = `<h3> Alf/Varg</h3
-                                  <h4>
-                                    VN: ${parseFloat(trin5.toFixed(2))} <br>
-                                    SN: ${parseFloat(vint5.toFixed(2))} <br>
-                                    PE: ${parseFloat(vint0.toFixed(2))} <br>
-                                    AT: ${parseFloat(vint0.toFixed(2))} <br></h4>`
                 
-                                    sjdr.innerHTML = `<h3> SJDR</h3
+
+                alfv.innerHTML = `<h3> Lav/Alf/Vga</h3
+                                  <h4>
+                                    VN: ${trin5.toLocaleString('pt-BR',{ minimumFractionDigits: 2, style: 'currency', currency: 'BRL' })} <br>
+                                    SN: ${vint5.toLocaleString('pt-BR', { minimumFractionDigits: 2, style: 'currency', currency: 'BRL' })} <br>
+                                    PE: ${vint0.toLocaleString('pt-BR', { minimumFractionDigits: 2, style: 'currency', currency: 'BRL' })} <br>
+                                    AT :${vint0.toLocaleString('pt-BR', { minimumFractionDigits: 2, style: 'currency', currency: 'BRL' })} <br></h4>`
+                
+                sjdr.innerHTML = `<h3> SJDR</h3
                                   <h4>  
-                                    VN: ${parseFloat(vint5.toFixed(2))}  <br>
-                                    SN: ${parseFloat(quinz.toFixed(2))} <br>
-                                    PE: ${parseFloat(quinz.toFixed(2))} <br>
-                                    AT: ${parseFloat(quinz.toFixed(2))} <br>
-                                    LT: ${parseFloat(dez.toFixed(2))}   <br> 
-                                    AD: ${parseFloat(adsj.toFixed(2))}  <br></h4>`  
+                                    VN: ${vint5.toLocaleString('pt-BR', { minimumFractionDigits: 2, style: 'currency', currency: 'BRL' })} <br>
+                                    SN: ${quinz.toLocaleString('pt-BR', { minimumFractionDigits: 2, style: 'currency', currency: 'BRL' })} <br>
+                                    PE: ${quinz.toLocaleString('pt-BR', { minimumFractionDigits: 2, style: 'currency', currency: 'BRL' })} <br>
+                                    AT :${quinz.toLocaleString('pt-BR', { minimumFractionDigits: 2, style: 'currency', currency: 'BRL' })} <br>
+                                    LT :${dez.toLocaleString('pt-BR',   { minimumFractionDigits: 2, style: 'currency', currency: 'BRL' })} <br>
+                                    AD:${vint0.toLocaleString('pt-BR', { minimumFractionDigits: 2, style: 'currency', currency: 'BRL' })} <br></h4>`  
                                      
 
                                      
-                }        
+                }         
             }
         </script>
     </body>
